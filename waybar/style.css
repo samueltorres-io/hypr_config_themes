@@ -1,0 +1,123 @@
+@import "macchiato.css";
+
+* {
+  font-family: "0xProto Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+/* Styling for modules like pulseaudio, network, etc. */
+#pulseaudio:hover {
+  background-color: @surface2;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+  background-color: @lavender;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio {
+  padding: 0 10px;
+}
+
+#pulseaudio {
+  color: @white;
+}
+
+#network {
+  color: @white;
+}
+
+#temperature {
+  color: @white;
+}
+
+#battery {
+  color: @white;
+  padding: 0 10px;
+}
+
+#battery.warning {
+  color: @red;
+}
+
+#custom-power {
+  color: @red;
+  padding: 0 10px;
+}
+
+#clock {
+  color: @white;
+}
+
+#window {
+  color: @white;
+}
+
+/* Styling for specific icons in modules */
+.modules-right,
+.modules-left,
+.modules-center {
+  background-color: @base;
+  border-radius: 15px;
+}
+
+.modules-right {
+  padding: 0 10px;
+}
+
+.modules-left {
+  padding: 0 20px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}

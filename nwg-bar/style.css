@@ -1,0 +1,49 @@
+window {
+        background-color: rgba (30, 30, 46, 0.4);
+	border-radius: 12px;
+	transition: all 0.3s ease-in-out;
+	padding: 10px;
+}
+
+/* Outer bar container, takes all the window width/height */
+#outer-box {
+	margin: 0px;
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+	background-color: rgba (30, 30, 46, 0.9);
+	border-radius: 10px;
+	border-style: none;
+	padding: 10px;
+	margin: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+button, image {
+	background: none;
+	border: none;
+	box-shadow: none
+}
+
+button {
+	background-color: rgba(255, 255, 255, 0.05);
+	border: none;
+	border-radius: 8px;
+	padding: 10px 14px;
+	margin: 6px;
+	transition: background 0.2s ease-in-out;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+button:hover {
+	background-color: rgba (255, 255, 255, 0.15);
+}
+
+image {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
